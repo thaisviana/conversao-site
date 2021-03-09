@@ -4,7 +4,7 @@ const options_currencyapi = {
   url: 'https://currencyapi-net.p.rapidapi.com/currencies',
   params: {output: 'JSON', base: 'USD'},
   headers: {
-    'x-rapidapi-key': '657110f0a7msh6c1bc80927731a7p103c92jsncc392fa93be0',
+    'x-rapidapi-key': '',
     'x-rapidapi-host': 'currencyapi-net.p.rapidapi.com',
     'useQueryString': true
   }
@@ -14,7 +14,7 @@ const options_convert = {
   method: 'GET',
   url: 'https://currency38.p.rapidapi.com/currency/free/convert',
   headers: {
-    'x-rapidapi-key': '657110f0a7msh6c1bc80927731a7p103c92jsncc392fa93be0',
+    'x-rapidapi-key': '',
     'x-rapidapi-host': 'currency38.p.rapidapi.com'
   }
 };
