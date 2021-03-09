@@ -5,30 +5,35 @@
     <meta name="viewport" content="width=device-width">
     <title>crypto.dataviz</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
   </head>
   <body>
     <h1>Conversão</h1>
 
     <div>
+      <p>Moeda de:</p>
       <select name="from" id="currency-from">
         
         <!-- <option value="goldfish">Goldfish</option> -->
     </select>
     </div>
     <div>
+      <p>Moeda para:</p>
       <select name="to" id="currency-to">
         <!-- <option value="goldfish">Goldfish</option> -->
     </select>
     </div>
     <div>
+      <p>Valor:</p>
       <input type="number" id="amount"/>
     </div>
 
     <button type="button" onclick="convert()">Converter</button>
     <div class="data" id="data">
-        <div id="rate"></div>
-        <div id="converted_amount"></div>
+      <div class="box" id="converted_amount"></div>
+        <div class="box" id="rate"></div>
     </div>
 
     <script src="main.js"></script>
