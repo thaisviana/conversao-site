@@ -12,10 +12,10 @@ const options_currencyapi = {
 
 const options_convert = {
   method: 'GET',
-  url: 'https://currency38.p.rapidapi.com/currency/free/convert',
+  url: 'https://currency-converter5.p.rapidapi.com/currency/convert',
   headers: {
     'x-rapidapi-key': '',
-    'x-rapidapi-host': 'currency38.p.rapidapi.com'
+    'x-rapidapi-host': 'currency-converter5.p.rapidapi.com'
   }
 };
 
@@ -34,11 +34,11 @@ function convert(){
   let amount = document.getElementById("amount").value
   let currency_from = document.getElementById("currency-from").value
   let currency_to = document.getElementById("currency-to").value
-  options_convert.params = {from: currency_from, to: currency_to, amount: amount}
+  options_convert.params = {from: currency_from, to: currency_to, amount: amount, format: 'json'}
   axios.request(options_convert).then(function (response) {
-    console.log(response.data.data.exchange_rate);
-    document.getElementById("rate").innerHTML = "Taxa : " + response.data.data['exchange_rate']
-    document.getElementById("converted_amount").innerHTML = "Valor : " + response.data.data['converted']
+    console.log(response.data.rates[currency_to]);
+    document.getElementById("rate").innerHTML = "Taxa : " + response.data.rates[currency_to].rate
+    document.getElementById("converted_amount").innerHTML = "Valor : " + response.data.rates[currency_to].rate_for_amount
   }).catch(function (error) {
     console.error(error);
   });
