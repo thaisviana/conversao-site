@@ -44,4 +44,14 @@ function convert(){
   });
 }
 
+async function trocar_cor(){
+  while(true){
+    document.getElementById("body").style.backgroundColor = (`rgb(${parseInt(Math.random()*255)},${parseInt(Math.random()*255)},${parseInt(Math.random()*255)})`)
+    // console.log(b)
+    await new Promise(r => setTimeout(r, 1500));
+  }
+}
+
+trocar_cor()
+
 
